@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Racha conta</title>
+        <script src="core.js"></script>
+    </head>
+    <body>
+        <h1>Quanto fica pra cada?</h1>
+        <form>
+            <fieldset>
+                <legend>O que devo saber:</legend>
+                <label for="totVal">Valor total da conta:</label><br>
+                <input type="text" id="totVal"/><br>
+                <label for="nbPessoas">Quantos somos:</label><br>
+                <input type="text" id="nbPessoas"/><br>
+                <input type="submit" value="Calcular" onclick="Calcular();">
+            </fieldset>
+            <fieldset>
+                <legend>Resultado:</legend>
+                <label for="totCada">Cada un paga:</label><br>
+                <input type="text" id="totCada"><br>
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Racha conta</title>
         <script src="core.js"></script>
     </head>
@@ -9,16 +11,33 @@
         <form>
             <fieldset>
                 <legend>O que devo saber:</legend>
-                <label for="totVal">Valor total da conta:</label><br>
-                <input type="text" id="totVal" /><br>
-                <label for="nbPessoas">Quantos somos:</label><br>
-                <input type="text" id="nbPessoas" /><br>
+                <label for="billAmount">Valor total da conta:</label><br>
+                <input type="text" id="billAmount" autofocus=autofocus /><br>
+                <label for="nbPaying">Quantos somos:</label><br>
+                <input type="text" id="nbPaying" /><br>
+                
+                <input type="checkbox" id="isAddTip" >
+                <label for="isAddTip">Adiciona gorjeta</label><br>
+                
+                <input type="radio" id="optTipPerc" name="tipType" value=1 />
+                <label for="optTipPerc">percentual</label>
+                <input type="radio" id="optTipAmount" name="tipType" value=2 />
+                <label for="optTipAmount">valor</label><br>
+                
+                <input type="text" id="tipBase" /><br>
+                
+                <br><br>
+                
                 <input type="submit" value="Calcular" onclick="Calcular();" />
             </fieldset>
             <fieldset>
                 <legend>Resultado:</legend>
-                <label for="totCada">Cada un paga:</label><br>
-                <input type="text" id="totCada" /><br>
+                
+                <label for="tipAmount">Valor da gorjeta:</label><br>
+                <input type="text" id="tipAmount" value="0" /><br>
+                
+                <label for="eachAmount">Cada un paga:</label><br>
+                <input type="text" id="eachAmount" /><br>
             </fieldset>
         </form>
     </body>
